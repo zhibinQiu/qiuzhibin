@@ -26,6 +26,7 @@ public class ServerResponse<T> implements Serializable {                 //实�
         this.status=status;
         this.msg=msg;
 
+
     }
     @JsonIgnore
     //是之不在序列化

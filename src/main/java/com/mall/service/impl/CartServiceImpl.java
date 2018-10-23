@@ -1,4 +1,4 @@
-package com.mall.service;
+package com.mall.service.impl;
 
 import com.google.common.collect.Lists;
 import com.mall.common.ServerResponse;
@@ -6,6 +6,7 @@ import com.mall.dao.CartMapper;
 import com.mall.dao.ProductMapper;
 import com.mall.pojo.Cart;
 import com.mall.pojo.Product;
+import com.mall.service.ICartService;
 import com.mall.vo.CartProductVo;
 import com.mall.vo.CartVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("ICartService")
+@Service("iCartService")
 public class CartServiceImpl implements ICartService {
 
     @Autowired
@@ -38,7 +39,7 @@ public class CartServiceImpl implements ICartService {
 
     @Override
     public ServerResponse<CartVo> list(Integer userId) {
-        CartVo cartVo = this.;
+
         return null;
     }
 
@@ -56,6 +57,7 @@ public class CartServiceImpl implements ICartService {
         CartVo cartVo = new CartVo();
         List<Cart> cartList = cartMapper.selectCartByUserId(userId);
         List<CartProductVo> cartProductVoList = Lists.newArrayList();
+        return null;
 
     }
 }
