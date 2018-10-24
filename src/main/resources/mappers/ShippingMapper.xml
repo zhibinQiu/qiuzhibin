@@ -197,4 +197,13 @@
     where id = #{id,jdbcType=INTEGER}
     and user_id = #{userId,jdbcType=INTEGER}
 </update>
+  <select id="selectByShippingIdUserId" resultMap="BaseResultMap" parameterType="map">
+    select
+    <include refid="Base_Column_List"/>
+    from
+    mmall_shipping
+    where user_id=#{userId}
+    and id=#{shippingId}
+
+  </select>
 </mapper>

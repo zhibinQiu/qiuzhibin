@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 
 @Service("iShippingService")
@@ -51,11 +52,17 @@ public class ShippingServiceImpl implements IShippingService {
 
     @Override
     public ServerResponse<Shipping> select(Integer userId, Integer shippingId) {
-        return null;
+        Shipping shipping = shippingMapper.selectByShippingIdUserId(userId,shippingId);
+        if(shipping==null){
+            return ServerResponse.createByErrorMessage("无法查询到该地址");
+        }
+        return ServerResponse.createBySuccess("更新地址成功",shipping);
     }
 
     @Override
     public ServerResponse<PageInfo> list(Integer userId, int pageNum, int pageSize) {
-        return null;
+        List<Shipping> shippingList = shippingMapper.selectByUserId(userId);
+        PageInfo pageInfo = new PageInfo(shippingList);
+        return ServerResponse.createBySuccess(pageInfo);
     }
 }

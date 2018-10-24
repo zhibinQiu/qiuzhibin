@@ -166,7 +166,7 @@
   <select id="selectUserQuestionByUsername" resultType="string" parameterType="string">
     select question from mmall.mmall_user where username= #{username}
   </select>
-  <select id="checkAnswer" resultType="_int" parameterType="map">
+  <select id="checkAnswer" resultType="int" parameterType="map">
     select count(1) from mmall_user
     where
     username=#{username}
