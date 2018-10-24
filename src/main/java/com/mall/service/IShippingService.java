@@ -1,10 +1,10 @@
 package com.mall.service;
 
-import com.github.pagehelper.PageInfo;
-import com.mall.common.ServerResponse;
-import com.mall.pojo.Shipping;
+        import com.github.pagehelper.PageInfo;
+        import com.mall.common.ServerResponse;
+        import com.mall.pojo.Shipping;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 public interface IShippingService {
     ServerResponse add(Integer userId, Shipping shipping);

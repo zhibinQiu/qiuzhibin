@@ -1,27 +1,52 @@
 package com.mall.service.impl;
 
 import com.github.pagehelper.PageInfo;
+import com.google.common.collect.Maps;
 import com.mall.common.ServerResponse;
+import com.mall.dao.ShippingMapper;
 import com.mall.pojo.Shipping;
 import com.mall.service.IShippingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Map;
 
 @Service("iShippingService")
 public class ShippingServiceImpl implements IShippingService {
 
+    @Autowired
+    private ShippingMapper shippingMapper;
+
     @Override
     public ServerResponse add(Integer userId, Shipping shipping) {
-        return null;
+           shipping.setUserId(userId);
+           int rowCount = shippingMapper.insert(shipping);
+           if(rowCount>0){
+               Map result = Maps.newHashMap();
+               result.put("shippingId",shipping.getId());
+               return ServerResponse.createBySuccess("创建地址成功",result);
+           }
+           return ServerResponse.createByErrorMessage("创建地址失败");
     }
 
     @Override
     public ServerResponse<String> del(Integer userId, Integer shippingId) {
-        return null;
+         int rowCount = shippingMapper.deleteByShippingIdUserId(userId,shippingId);
+         if(rowCount>0){
+             return ServerResponse.createBySuucessMessage("删除地址成功");
+         }
+        return ServerResponse.createByErrorMessage("删除地址失败");
     }
 
     @Override
-    public ServerResponse update(Integer userId, Shipping shipping) {
-        return null;
+    public ServerResponse update(Integer userId, Shipping shipping){
+        int rowCount = shippingMapper.updateByShipping(shipping);
+        if(rowCount>0){
+            return ServerResponse.createBySuucessMessage("地址更新成功");
+        }
+        return ServerResponse.createByErrorMessage("地址更新失败");
     }
 
     @Override
