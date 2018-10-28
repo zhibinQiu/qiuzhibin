@@ -1,0 +1,100 @@
+ 
+.gray{
+
+}
+body{padding:0; margin:0 auto; font-size:12px; color:#000000; font-family:"宋体",Arial, Helvetica, sans-serif; background-color:#eeeeee; overflow-x:hidden;}
+a,a:link{ color:#000000; text-decoration:none; cursor:pointer;}
+a:hover{ color:#000000; text-decoration:none;}
+img{ border:none;}
+input{ font-size:12px;}
+ul,dl,li,dt,dd{ margin:0; padding:0; list-style:none; list-style-type:none;}
+h1,h2,h3,h4,h5,p{ font-weight:normal; font-style:normal; margin:0; padding:0;}
+em,form{ margin:0; padding:0;}
+.clear{ clear:both; height:0px; font-size:0;}
+.clear10{ clear:both; height:10px; font-size:0;}
+.clear30{ clear:both; height:30px; font-size:0;}
+.f_r{ float:right;}
+.topBg/*顶栏红蓝背景*/{ width:100%; height:107px; background-image:url(../images/topBg.gif); background-repeat:repeat-x;}
+.w1018/**/{ width:1018px; margin:auto;}
+.logo/*左边的LOGO*/{ float:left; width:317px;}
+.w701/*右边的内容*/{ float:left; width:701px;}
+.topsearch/*顶栏搜索*/{ height:72px;}
+
+
+.ssBg{ width:116px; height:19px; line-height:19px; background:#ffffff; border-left:1px solid #576878; border-top:1px solid #576878; border-bottom:1px solid #576878; border-right:0px; float:left ;text-indent:5px; color:#7b7b7b; outline-style:none; outline-width:medium;}
+.ssMenu{ width:26px; height:23px; float:left; background-image:url(../images/ss.jpg); border:0; cursor:pointer;}
+
+
+.sinaweibo/*新浪微博*/{ width:30px; height:30px; background-image:url(../img/w1.gif); float:left;margin:0 20px 0 20px;}
+a:hover .sinaweibo{ background-image:url(../img/w2.gif); width:30px; height:30px;}
+
+.qqweibo/*腾讯微博*/{ width:30px; height:30px; background-image:url(../img/w5.gif); float:left; margin:0 20px 0 20px; }
+a:hover .qqweibo{ background-image:url(../img/w6.gif); width:30px; height:30px;}
+
+.weixin/*微信*/{ width:30px; height:30px; background-image:url(../img/w3.gif); float:left;}
+a:hover .weixin{ background-image:url(../img/w4.gif); width:30px; height:30px;}
+
+
+
+.header/*导航栏*/{ margin-left:5px; height:35px;}
+.header .menu {z-index:500; font-size:16px;}
+.header .menu ul.menu-list {float:left;}
+.header .menu ul.menu-list li { position:relative; z-index:500; float:left; margin:0; width:85px; height:35px; line-height:35px; text-align:center;}
+ .header .menu ul.menu-list li a {display: block; _display:inline-block; _width:100%; height:35px; color:#ffffff;}
+.header .menu ul.menu-list li a span { display: block;_display: inline-block;padding:0 2px 0 0;_width: 100%;cursor: pointer;}
+.header .menu ul.menu-list li.current {background:#264a6c;}
+.header .menu ul.menu-list li.current a { color:#fff; background:#264a6c;}
+.header .menu ul.menu-list li.current a span {background:#264a6c;}
+.header .menu ul.menu-list li a.hover, 
+.header .menu ul.menu-list li a:hover {color:#fff; white-space: nowrap;}
+.header .menu ul.menu-list li a.hover span, 
+.header .menu ul.menu-list li a:hover span {background:#264a6c;}
+.header .menu ul.menu-list li ul.menu-sublist {display:none; position:absolute; top:35px; left:0; z-index:60; padding:5px 0 10px 0; width:170px; background:#264a6c;}
+.header .menu ul.menu-list li.menu-list-bbs ul.menu-sublist { width:170px;}
+.header .menu ul.menu-list li ul.menu-sublist li { float:left; width:85px; height:30px; line-height:30px; text-align:left; background:none;}
+
+.header .menu ul.menu-list li.menu-list-company ul.menu-sublist li { text-align: right;}
+.header .menu ul.menu-list li ul.menu-sublist li.menu-sublist-li1 { border-top: 0;}
+.header .menu ul.menu-list li ul.menu-sublist li a { padding:0; width:77px; height:30px; color:#fff; font-size:12px; font-weight:normal; background:none; padding-left:8px;}
+
+.header .menu ul.menu-list li.menu-list-company.hover ul.menu-sublist li a, 
+.header .menu ul.menu-list li.menu-list-company ul.menu-sublist li a { padding:0; width:85px; float:left;}
+.header .menu ul.menu-list li ul.menu-sublist li a:hover { font-weight: normal; background: #264a6c;}
+
+.loginbox/*登录框*/{ width:141px; height:21px; border:1px solid #d5d5d5; background:#ffffff; outline-style:none; outline-width:medium;}
+.xlk/*下拉框*/{ height:21px; border:1px solid #d5d5d5; background:#ffffff;}
+.xtrk{ color:#000000;}
+.xtrk a:hover{ text-decoration:underline;}
+.zhuceMenu/*注册*/{ width:49px; height:23px; background-image:url(../img/zhuce.jpg);}
+a:hover .zhuceMenu{ background-image:url(../img/zhuce2.jpg); width:49px; height:23px;}
+.dengluMenu/*登录*/{ width:49px; height:23px; background-image:url(../img/denglu.jpg); cursor:pointer; border:0; overflow:hidden;}
+a:hover .dengluMenu{ background-image:url(../img/denglu2.jpg); width:49px; height:23px;}
+.dengluMenu2/*登录*/{ width:49px; height:23px; background-image:url(../img/denglu2.jpg); cursor:pointer; border:0;}
+
+/*文字环绕*/
+.flow-image{
+ float: left;width: 200px;height: auto;
+margin: 20px}
+.wenzi{
+ font-size: 12px;
+ float: top;
+ padding: 50px;
+}
+/*底部*/
+
+.footBg{ width:100%; height:150px; padding-top:14px; background-color:#032f54; color:#ffffff;}
+.footleft{ float:left; margin-left:16px; line-height:24px; width:290px;}
+.footleft a{ float:left; color:#ffffff; margin-right:15px;}
+.footright{ float:left; width:440px; line-height:24px; text-align:center;}
+.footright a{ color:#ffffff;}
+.footcenter{text-align:center;}
+/*--------------------搜索CSS--------------------*/
+.w1000/**/{ float:left; width:1000px; border:1px solid #bfbfbf;}
+.sousuoCon{ width:97%; margin:auto; line-height:24px;}
+dl.sslist{border-bottom:1px dashed #ccc; line-height:1.8em; padding:10px 0 10px;}
+dl.sslist dt{height:30px;}
+dl.sslist dt span a,dl.list3 dt span a:visited/*深蓝色*/{font-size:14px; color:#264a6c;}
+dl.sslist dt a,dl.list3 dt a:visited/*暗红色*/{font-size:14px; color:#8c1616;}
+dl.sslist dt a:hover{font-size:14px; color:#000000;}
+dl.sslist dd/*发布时间*/{color:#6c6c6c;}
+dl.sslist dd.zy{height:50px; text-indent:2em; color:#4e4e4e; overflow:hidden;}
