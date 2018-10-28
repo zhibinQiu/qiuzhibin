@@ -10,10 +10,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-<<<<<<< HEAD
+
 import org.springframework.web.bind.annotation.ResponseBody;
-=======
->>>>>>> 8360355204d135e73030ee9d1a45deb156048445
+
 
 import javax.servlet.http.HttpSession;
 
@@ -24,12 +23,10 @@ public class OrderController {
 
     @Autowired
     private IOrderService iOrderService;
-<<<<<<< HEAD
+
     @RequestMapping("create.do")
     @ResponseBody
-=======
 
->>>>>>> 8360355204d135e73030ee9d1a45deb156048445
     public ServerResponse create(HttpSession session,Integer shippingId){
         User user = (User)session.getAttribute(Const.CURRENT_USER);
         if(user==null){
