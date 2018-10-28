@@ -27,14 +27,17 @@ public class ProductManageController {
 
     @RequestMapping("save.do")
     @ResponseBody
-    public ServerResponse productSave(HttpSession session, Product product){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
-        if(user == null){
-            return ServerResponse.createByError(ResponseCode.NEED_LOGIN.getCode(),"用户未登录");
+    public ServerResponse productSave(HttpSession session, Product product) {
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        if (user == null) {
+            return ServerResponse.createByError(ResponseCode.NEED_LOGIN.getCode(), "用户未登录");
         }
-        if(iUserService.checkAdminRole(user).isSuccess()){
-            return iProductService.
+        if (iUserService.checkAdminRole(user).isSuccess()) {
+            return null;
+
 
         }
+        return null;
     }
+
 }
