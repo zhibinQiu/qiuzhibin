@@ -63,10 +63,7 @@ public ServerResponse getCategoryAndDeepChildrenById(HttpSession session,@Reques
         return iCategoryService.selectCategoryAndChildrenById(categoryId);
 
     }else{
-<<<<<<< HEAD
 
-=======
->>>>>>> 8360355204d135e73030ee9d1a45deb156048445
         return ServerResponse.createByErrorMessage("无权限操作,需要管理员权限");
     }
 }
