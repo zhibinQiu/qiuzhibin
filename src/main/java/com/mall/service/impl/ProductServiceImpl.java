@@ -10,6 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 @Service("IProductService")
 public class ProductServiceImpl implements IProductService {
 
@@ -18,11 +19,22 @@ public class ProductServiceImpl implements IProductService {
     public ServerResponse saveOrUpdateProduct(Product product){
         if(product!=null){
             if(StringUtils.isNoneBlank(product.getSubImages())){
+=======
+@Service("iProductService")
+public class ProductServiceImpl implements IProductService {
+    @Autowired
+    private ProductMapper productMapper;
+    @Override
+    public ServerResponse saveOrUpdateProduct(Product product) {
+        if(product!=null){
+            if(StringUtils.isNotBlank(product.getSubImages())){
+>>>>>>> 8360355204d135e73030ee9d1a45deb156048445
                 String[] subImageArray = product.getSubImages().split(",");
                 if(subImageArray.length>0){
                     product.setMainImage(subImageArray[0]);
                 }
             }
+<<<<<<< HEAD
             if(product.getId()!=null){
                 productMapper.updateByPrimaryKey(product);
                 return ServerResponse.createBySuucessMessage("更新产品成功");
@@ -33,6 +45,18 @@ public class ProductServiceImpl implements IProductService {
             }
         }
         return ServerResponse.createByErrorMessage("更新产品失败");
+=======
+        }
+        if(product.getId()!=null){
+            int rowCount = productMapper.updateByPrimaryKey(product);
+            if(rowCount>0){
+                return ServerResponse.createBySuucessMessage("更新商品成功");
+            }else{
+
+            }
+        }
+        return null;
+>>>>>>> 8360355204d135e73030ee9d1a45deb156048445
     }
 
     @Override

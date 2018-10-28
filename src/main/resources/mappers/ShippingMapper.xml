@@ -204,11 +204,15 @@
     mmall_shipping
     where user_id=#{userId}
     and id=#{shippingId}
+<<<<<<< HEAD
   </select>
   <select id="selectByUserId" resultMap="BaseResultMap" parameterType="map">
   select
   <include refid="Base_Column_List"/>
   from mmall_shipping
   where user_id = #{userId}
+=======
+
+>>>>>>> 8360355204d135e73030ee9d1a45deb156048445
   </select>
 </mapper>
